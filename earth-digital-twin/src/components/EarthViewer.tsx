@@ -80,6 +80,7 @@ export function EarthViewer() {
       viewer.scene.globe.depthTestAgainstTerrain = true;
       viewer.scene.globe.showGroundAtmosphere = true;
 
+      /*
       const cloudLayer = viewer.imageryLayers.addImageryProvider(
         new UrlTemplateImageryProvider({
           url: 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/2024-01-01/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',
@@ -89,6 +90,7 @@ export function EarthViewer() {
         })
       );
       cloudLayer.alpha = 0.22;
+      */
 
       if (ionToken) {
         viewer.terrainProvider = await createWorldTerrainAsync({
